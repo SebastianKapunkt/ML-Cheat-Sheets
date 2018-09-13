@@ -1,30 +1,117 @@
-\documentclass[a4paper,12pt,ngerman]{article}
+\documentclass[a4paper,12pt,ngerman,fleqn]{article}
 
     \renewcommand{\familydefault}{\sfdefault}
     \usepackage[a4paper, margin={0cm,0cm},twocolumn, layouthoffset=0pt]{geometry}
     
     \usepackage{tikz}
+    \usepackage{framed}
     \usepackage{amsmath}
-    
-    \begin{document}
+    \setlength{\mathindent}{0pt}
+    \usepackage{amsfonts}
+    \usepackage{amssymb}
+    \usepackage{amsmath}
+    \usepackage{tabularx, colortbl}
+
+    \usepackage{xcolor}
+    \definecolor{accent}{HTML}{0eb7ac}
+
+    \linespread{1}
+    \vspace{1cm}
+    \renewcommand{\arraystretch}{2}
+    \newcommand{\mybox}[3]{
+        \centering
+        \begin{tabularx}{0.9\textwidth}{|X|}
+            \hline
+            \rowcolor{accent} 
+            \textcolor{white}{\textbf{#1}} \\ \hline
+            #2
+            \\ \hline
+            #3
+            \\ \hline
+        \end{tabularx}
+    }
+
+\begin{document}
     
     \setlength{\parindent}{0cm}
 
     \begin{tikzpicture} 
-        \fill[violet, opacity=1] (0,0) rectangle (21,4);
-        \fill[violet, opacity=1] (1,0.1)
-            -- (2,-1)
-            -- (3,0.1)
+        \fill[accent, opacity=1] (0,0) rectangle (21,3);
+        \fill[accent, opacity=0.8] (0,-2) rectangle (21,0);
+        \fill[accent, opacity=1] (1.5,0.1)
+            -- (2,-0.5)
+            -- (2.5,0.1)
             -- cycle;
-        \node[anchor=east,text=white] (why1) at (7,2) {\huge Linear Regression};
+        \node[anchor=east,text=white] (why1) at (7,1.5) {\huge Linear Regression};
+        \node[anchor=east,text=white] (why1) at (9,-1) {This is a helpfull text to descripte the problem};
     \end{tikzpicture}
 
-    Hypothesis
-    \newline
-    \begin{align*}
-        \theta_0 := & \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \newline
-        \theta_1 := & \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right) \newline
-        \rbrace&
-    \end{align*}
-
-    \end{document}
+    % LEFT SIDE OF SHEAT
+    \begin{minipage}[t]{.51\textwidth}
+        \vspace{1pt}
+        \mybox
+            {Section 1}
+            {\( \theta_0 := \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \)}
+            {
+                * aksdasd \\
+                * asdasjd
+            }
+        \newline
+        \newline
+        \newline
+        \mybox
+            {Section 2}
+            {\( \theta_0 := \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \)}
+            {
+                * aksdasd \\
+                * AOSDJA \\
+                * ajsidjaisdjaisjdioajsdjaosdjas daoisdioasjd asoidajsd jd iajsidi jajadoisjoidjaosiod jaoisjdoiasjdoaj sodjaosjdoiajsod a
+            }
+        \newline
+        \newline
+        \newline
+        \mybox
+            {Section 3}
+            {\( \theta_0 := \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \)}
+            {
+                * aksdasd \\
+                * asdasjd
+            }
+        \newline
+    \end{minipage}%
+    \begin{minipage}[t]{.51\textwidth}
+        \vspace{1pt}
+        \mybox
+            {Section 4}
+            {\( \theta_0 := \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \)}
+            {
+                * aksdasd \\
+                * asdasjd
+            }
+        \newline
+        \newline
+        \newline
+        \mybox
+            {Section 5}
+            {\( \theta_0 := \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \)}
+            {
+                * aksdasd \\
+                * asdasjd
+            }
+        \newline
+        \newline
+        \newline
+        \mybox
+            {Section 6}
+            {\( \theta_0 := \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \)}
+            {
+                * aksdasd \\
+                * asdasjd \\
+                * aksdasdk \\
+                * askdaksd \\
+                * ajsdija
+            }
+        \newline
+    \end{minipage}
+    
+\end{document}
