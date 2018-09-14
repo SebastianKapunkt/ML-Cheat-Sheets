@@ -18,12 +18,13 @@
     \linespread{1}
     \vspace{1cm}
     \renewcommand{\arraystretch}{2}
+    \arrayrulecolor{accent}
+    \setlength\arrayrulewidth{1.5pt}
     \newcommand{\mybox}[3]{
         \centering
         \begin{tabularx}{0.9\textwidth}{|X|}
-            \hline
-            \rowcolor{accent} 
-            \textcolor{white}{\textbf{#1}} \\ \hline
+            \rowcolor{accent}
+            \textcolor{white}{\textbf{#1}} \\
             #2
             \\ \hline
             #3
