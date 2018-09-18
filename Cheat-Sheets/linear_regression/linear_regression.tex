@@ -1,0 +1,100 @@
+\documentclass[a4paper,12pt,ngerman,fleqn]{article}
+
+    \renewcommand{\familydefault}{\sfdefault}
+    \usepackage[a4paper, margin={0cm,0cm},twocolumn, layouthoffset=0pt]{geometry}
+    
+    \usepackage{tikz}
+    \usepackage{framed}
+    \usepackage{amsmath}
+    \setlength{\mathindent}{0pt}
+    \usepackage{amsfonts}
+    \usepackage{amssymb}
+    \usepackage{amsmath}
+    \usepackage{tabularx, colortbl}
+
+    \usepackage{xcolor}
+    \definecolor{accent}{HTML}{0eb7ac}
+
+    \linespread{1}
+    \vspace{1cm}
+    \renewcommand{\arraystretch}{2}
+    \arrayrulecolor{accent}
+    \setlength\arrayrulewidth{1.5pt}
+    \newcommand{\mybox}[3]{
+        \centering
+        \begin{tabularx}{0.9\textwidth}{|X|}
+            \rowcolor{accent}
+            \textcolor{white}{\textbf{#1}} \\
+            \def\temp{#2}\ifx\temp\empty
+                
+            \else
+                #2 \\ \hline
+            \fi
+            #3
+            \\ \hline
+        \end{tabularx}
+    }
+
+\begin{document}
+    
+    \setlength{\parindent}{0cm}
+
+    \begin{tikzpicture} 
+        \fill[accent, opacity=1] (0,0) rectangle (21,3);
+        \fill[accent, opacity=0.8] (0,-2) rectangle (21,0);
+        \fill[accent, opacity=1] (1.5,0.1)
+            -- (2,-0.5)
+            -- (2.5,0.1)
+            -- cycle;
+        \node[anchor=east,text=white] (why1) at (18.4,1.5) {
+            \huge Linear Regression - "multivariete linear regression" 
+        };
+        \node[anchor=east,text=white] (why1) at (14,-1) {
+            Linear regression with multiple variables is used for classification problems,
+        };
+        \node[anchor=east,text=white] (why1) at (9.7,-1.4) {
+            where the data can be seperated by a straigh line
+        };
+    \end{tikzpicture}
+
+    % LEFT SIDE OF SHEAT
+    \begin{minipage}[t]{.51\textwidth}
+        \vspace{1pt}
+        \mybox
+            {Notes}
+            {}
+            {
+                - uses supervised learning \\ \hline
+                Used variables description: \\
+                - \(x_{j}^i\) = value of feature j in the \(i^{th}\) traingin example \\
+                - \(x^i\) = the column vector of all the feature inputs of the \(i^{th}\) training example \\
+                - m = number of traning examples \\
+                - n = \(|x^i|\) ; the number of features
+            }
+        \newline
+        \newline
+        \newline
+        \mybox
+            {Hypothesis function}
+            {\( h_{\theta}(x) = \Theta_{0} + \Theta_{1}x_{1} + \Theta_{2}x_{2} + \Theta_{3}x_{3} + ... + \Theta_{n}x_{n} \)}
+            {
+                - equation of a streight line
+            }
+        \newline
+        \newline
+        \newline
+        \mybox
+            {Cost function}
+            {\( J(\Theta_{0}, \Theta_{1}) = \frac{1}{2m} \sum\limits_{i=1}^{m} (h\theta(x{(i)}) - y{(i)})^2 \)}
+            {
+                * meassuring accuracy of hypothesis \\
+                * also called "Square error function"
+            }
+        \newline
+    \end{minipage}%
+    \begin{minipage}[t]{.51\textwidth}
+        \vspace{1pt}
+        
+    \end{minipage}
+    
+\end{document}

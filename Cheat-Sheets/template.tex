@@ -25,7 +25,11 @@
         \begin{tabularx}{0.9\textwidth}{|X|}
             \rowcolor{accent}
             \textcolor{white}{\textbf{#1}} \\
-            #2
+            \def\temp{#2}\ifx\temp\empty
+                
+            \else
+                #2 \\ \hline
+            \fi
             \\ \hline
             #3
             \\ \hline
