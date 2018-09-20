@@ -20,10 +20,12 @@
     \renewcommand{\arraystretch}{2}
     \arrayrulecolor{accent}
     \setlength\arrayrulewidth{1.5pt}
+    \renewcommand{\baselinestretch}{0.8} 
     \newcommand{\mybox}[3]{
         \centering
         \begin{tabularx}{0.9\textwidth}{|X|}
             \rowcolor{accent}
+            \rule{0pt}{20pt}
             \textcolor{white}{\textbf{#1}} \\
             \def\temp{#2}\ifx\temp\empty
                 
@@ -49,11 +51,8 @@
         \node[anchor=east,text=white] (why1) at (18.4,1.5) {
             \huge Linear Regression - "multivariete linear regression" 
         };
-        \node[anchor=east,text=white] (why1) at (14,-1) {
-            Linear regression with multiple variables is used for classification problems,
-        };
-        \node[anchor=east,text=white] (why1) at (9.7,-1.4) {
-            where the data can be seperated by a straigh line
+        \node[anchor=east,text=white] (why1) at (22.5,-1) {
+            In regression problems, we are taking input variables and trying to fit the output onto a continuous expected result function.
         };
     \end{tikzpicture}
 
@@ -64,7 +63,8 @@
             {Notes}
             {}
             {
-                - uses supervised learning \\ \hline
+                - can be used with supervised learning \\ 
+                - always seperates data with a straigh line \\ \hline
                 Used variables description: \\
                 - \(x_{j}^i\) = value of feature j in the \(i^{th}\) traingin example \\
                 - \(x^i\) = the column vector of all the feature inputs of the \(i^{th}\) training example \\
@@ -87,8 +87,8 @@
             {Cost function}
             {\( J(\Theta_{0}, \Theta_{1}) = \frac{1}{2m} \sum\limits_{i=1}^{m} (h\theta(x{(i)}) - y{(i)})^2 \)}
             {
-                * meassuring accuracy of hypothesis \\
-                * also called "Square error function"
+                - meassuring accuracy of hypothesis \\
+                - also called "Square error function"
             }
         \newline
     \end{minipage}%

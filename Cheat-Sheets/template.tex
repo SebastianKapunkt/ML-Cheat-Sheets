@@ -20,17 +20,18 @@
     \renewcommand{\arraystretch}{2}
     \arrayrulecolor{accent}
     \setlength\arrayrulewidth{1.5pt}
+    \renewcommand{\baselinestretch}{0.8} 
     \newcommand{\mybox}[3]{
         \centering
         \begin{tabularx}{0.9\textwidth}{|X|}
             \rowcolor{accent}
+            \rule{0pt}{20pt}
             \textcolor{white}{\textbf{#1}} \\
             \def\temp{#2}\ifx\temp\empty
                 
             \else
                 #2 \\ \hline
             \fi
-            \\ \hline
             #3
             \\ \hline
         \end{tabularx}
