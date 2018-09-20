@@ -51,8 +51,11 @@
         \node[anchor=east,text=white] (why1) at (18.4,1.5) {
             \huge Linear Regression - "multivariete linear regression" 
         };
-        \node[anchor=east,text=white] (why1) at (22.5,-1) {
-            In regression problems, we are taking input variables and trying to fit the output onto a continuous expected result function.
+        \node[anchor=east,text=white] (why1) at (16.2,-0.9) {
+            In regression problems, we are taking input variables and trying to fit the output onto a
+        };
+        \node[anchor=east,text=white] (why1) at (7.35,-1.4) {
+            continuous expected result function.
         };
     \end{tikzpicture}
 
@@ -60,12 +63,9 @@
     \begin{minipage}[t]{.51\textwidth}
         \vspace{1pt}
         \mybox
-            {Notes}
+            {Variables}
             {}
             {
-                - can be used with supervised learning \\ 
-                - always seperates data with a straigh line \\ \hline
-                Used variables description: \\
                 - \(x_{j}^i\) = value of feature j in the \(i^{th}\) traingin example \\
                 - \(x^i\) = the column vector of all the feature inputs of the \(i^{th}\) training example \\
                 - m = number of traning examples \\
@@ -91,10 +91,58 @@
                 - also called "Square error function"
             }
         \newline
+        \newline
+        \newline
+        \mybox
+            {Gradient Descent}  
+            {} 
+            {
+                repeat until convergence: \{ \\
+                \( \Theta_{0} := \Theta_{0} - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x_{i}) - y_{i}) \) \\
+                \( \Theta_{1} := \Theta_{1} - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} ((h_\theta(x_{i}) - y_{i}) * x_{i} ) \) \\
+                \} \\ \hline 
+                - estimate the parameters in hypothesis function \\
+                - start with a guess for our hypothesis and then repeatedly apply these gradient descent equations, the hypothesis will become more and more accurate \\
+                - \( \Theta_0 \) = a constant that will be changing simultaneously with \( \Theta_1 \) \\
+                - \( x_i y _i \) = values of the geven training set
+            }
+        \newline
     \end{minipage}%
     \begin{minipage}[t]{.51\textwidth}
         \vspace{1pt}
-        
+        \mybox
+            {Example Data \& Notes}  
+            {} 
+            {
+                \rule{0pt}{75pt}
+                {
+                    \begin{tabularx}{0.8\textwidth}{|X|X|}
+                    \hline
+                    input x & output y \\ \hline
+                    1 & 2 \\ \hline
+                    2 & 3 \\ \hline
+                    3 & 4 \\ \hline
+                    \end{tabularx}
+                }
+                \\
+                \includegraphics[width=0.7\textwidth, height=60mm]{example-graph.png}
+                \\ \hline
+                - must be linear relationship between independent and dependent variables \\
+                - can be used with supervised learning \\ 
+                - always seperates data with a straigh line \\
+            }
+        \newline
+        \newline
+        \newline
     \end{minipage}
     
+    \vspace{53.5pt}
+    \fcolorbox{accent}{accent}{
+    \begin{minipage}[t]{1\textwidth}
+        \vspace{2pt}
+        \center
+        \textcolor{white}{\scriptsize \copyright 2018 - Machine Learning Collection 1/5 }
+        \vspace{2pt}
+    \end{minipage}
+    }
 \end{document}
